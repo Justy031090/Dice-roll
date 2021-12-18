@@ -12,6 +12,8 @@ export class Gameboard extends Component {
         displaySec: '',
         activePlayer: 1,
         winner: false,
+        showOne: true,
+        showTwo:false,
         players1:
             {
                 currentScore: 0,
@@ -25,8 +27,10 @@ export class Gameboard extends Component {
     }
 
     hold = () => {
-        this.state.activePlayer === 1 ? this.setState({activePlayer : 2}) : this.setState({activePlayer: 1})
-        this.setState({score: 0})
+        this.state.activePlayer === 1 ?
+        this.setState({activePlayer : 2, showTwo:true, showOne:false}) :
+        this.setState({activePlayer: 1, showOne: true, showTwo: false})
+        
     }
 
     rollDice = () =>{
@@ -107,7 +111,6 @@ export class Gameboard extends Component {
         if(e.target.value > 0){
         this.setState({pointsToWin: e.target.value})
         }
-        else alert('value must be positive number')
     }
     submitPoints = (e)=>{
         e.preventDefault();
@@ -122,12 +125,14 @@ export class Gameboard extends Component {
     reset = () => {
         this.setState({
             pointsToWin: 100,
-            diceOne: null,
-            diceTwo: null,
+            diceOne: 0,
+            diceTwo: 0,
             displayFirst: '',
             displaySec: '',
             activePlayer: 1,
             winner: false,
+            showOne: true,
+            showTwo:false,
             players1:
                 {
                     currentScore: 0,
@@ -146,6 +151,7 @@ export class Gameboard extends Component {
         return (
             <div>
                 <Player playerName='Player 1'
+                show={this.state.showOne}
                 totalScore={this.state.players1.globalScore}
                 partialScore={this.state.players1.currentScore}/>
 
@@ -161,6 +167,7 @@ export class Gameboard extends Component {
                     ></Settings>
 
                 <Player playerName='Player 2' 
+                show={this.state.showTwo}
                 totalScore={this.state.players2.globalScore}
                 partialScore={this.state.players2.currentScore}/>
             </div>
