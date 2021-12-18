@@ -1,0 +1,88 @@
+.main-settings{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background:linear-gradient( to right, #00aaff, #00ff6c);
+}
+.new-game{
+    margin-bottom: 10rem;
+}
+button{
+    margin: .5rem;
+    background: rgba(207, 22, 22, 0.9);
+    font-weight: bold;
+    font-size: 1rem;
+    border: transparent;
+    border-radius: 8.5%;
+}
+button:hover{
+    background: rgba(97, 0, 0, 0.9);
+}
+.container{
+    width: 100px;
+    height: 100px;
+    background:rgba(207, 22, 22, 0.75)
+}
+.img-container{
+    display: flex;
+
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+    border: transparent;
+}
+textarea:focus, 
+input:focus{
+    outline: none;
+}
+.dice1{
+    width: 100px;
+    height: 100px;
+    background : url('/src/assets/dice1.png') no-repeat;
+    background-size: cover;
+    border: 1px solid red;
+
+}
+.dice2{
+    width: 100px;
+    height: 100px;
+    background : url('/src/assets/dice2.png') no-repeat;
+    background-size: cover;
+    border: 1px solid red;
+
+}
+.dice3{
+    width: 100px;
+    height: 100px;
+    background : url('/src/assets/dice3.png') no-repeat;
+    background-size: cover;
+    border: 1px solid red;
+
+}
+.dice4{
+    width: 100px;
+    height: 100px;
+    background : url('/src/assets/dice4.png') no-repeat;
+    background-size: cover;
+    border: 1px solid red;
+}
+.dice5{
+    width: 100px;
+    height: 100px;
+    background : url('/src/assets/dice5.png') no-repeat;
+    background-size: cover;
+    border: 1px solid red;
+}
+.dice6{
+    width: 100px;
+    height: 100px;
+    background : url('/src/assets/dice6.png') no-repeat;
+    background-size: cover;
+    border: 1px solid red;
+}
